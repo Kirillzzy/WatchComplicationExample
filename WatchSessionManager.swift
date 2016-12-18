@@ -7,6 +7,7 @@
 //
 
 import WatchConnectivity
+import WatchKit
 
 class WatchSessionManager: NSObject, WCSessionDelegate {
   
@@ -87,6 +88,7 @@ extension WatchSessionManager {
     // handle receiving user info
     DispatchQueue.main.async {
       print("Received: \(userInfo)")
+      // Update UI from here
     }
   }
   

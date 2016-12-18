@@ -14,6 +14,8 @@ class ViewController: UIViewController {
   var data = [String: String]()
   
   @IBAction func sendButtonPressed(_ sender: AnyObject) {
+    
+    // [2]
     if let transferObject = WatchSessionManager.sharedManager.transferCurrentComplicationUserInfo(userInfo: data) {
       while transferObject.isTransferring {
         print("Data is transferring...")
@@ -24,9 +26,7 @@ class ViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
     data["12:00"] = "Test 1"
     data["15:00"] = "Test 2"
-    
   }
 }

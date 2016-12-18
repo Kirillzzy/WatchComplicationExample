@@ -11,6 +11,7 @@ import WatchKit
 class ExtensionDelegate: NSObject, WKExtensionDelegate {
 
     func applicationDidFinishLaunching() {
+      // [3]
       WatchSessionManager.sharedManager.startSession()
     }
 
@@ -23,17 +24,6 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
         // Use this method to pause ongoing tasks, disable timers, etc.
     }
 
-    func updateComplication() {
-      let complicationServer = CLKComplicationServer.sharedInstance()
-      guard let activeComplications = complicationServer.activeComplications else {
-        return
-      }
-      for complication in activeComplications {
-        print("UPDATE COMPLICATION")
-        complicationServer.reloadTimeline(for: complication)
-      }
-    }
-  
     func handle(_ backgroundTasks: Set<WKRefreshBackgroundTask>) {
         // Sent when the system needs to launch the application in the background to process tasks. Tasks arrive in a set, so loop through and process each one.
         for task in backgroundTasks {
@@ -44,13 +34,6 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
             case let snapshotTask as WKSnapshotRefreshBackgroundTask:
                 snapshotTask.setTaskCompleted(restoredDefaultState: true, estimatedSnapshotExpiration: Date.distantFuture, userInfo: nil)
             case let connectivityTask as WKWatchConnectivityRefreshBackgroundTask:
-                print("User Info: \(connectivityTask.userInfo)")
-                updateComplication()
-                WKExtension.shared().scheduleBackgroundRefresh(withPreferredDate: Date(timeIntervalSinceNow: 1 * 60 * 60), userInfo: nil, scheduledCompletion: { error in
-                  if let error = error {
-                    print(error.localizedDescription)
-                  }
-                })
                 connectivityTask.setTaskCompleted()
             case let urlSessionTask as WKURLSessionRefreshBackgroundTask:
                 urlSessionTask.setTaskCompleted()
