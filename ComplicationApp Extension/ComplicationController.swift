@@ -55,6 +55,11 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     
     func getTimelineEntries(for complication: CLKComplication, before date: Date, limit: Int, withHandler handler: @escaping ([CLKComplicationTimelineEntry]?) -> Void) {
         // Call the handler with the timeline entries prior to the given date
+      handler(nil)
+    }
+    
+    func getTimelineEntries(for complication: CLKComplication, after date: Date, limit: Int, withHandler handler: @escaping ([CLKComplicationTimelineEntry]?) -> Void) {
+        // Call the handler with the timeline entries after to the given date
       var timeLineEntryArray = [CLKComplicationTimelineEntry]()
       var nextDate = Date(timeIntervalSinceNow: 1 * 60 * 60)
       
@@ -72,11 +77,6 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         nextDate = nextDate.addingTimeInterval(1 * 60 * 60)
       }
       handler(timeLineEntryArray)
-    }
-    
-    func getTimelineEntries(for complication: CLKComplication, after date: Date, limit: Int, withHandler handler: @escaping ([CLKComplicationTimelineEntry]?) -> Void) {
-        // Call the handler with the timeline entries after to the given date
-        handler(nil)
     }
   
     func createTimeLineEntry(headerText: String, bodyText: String, date: Date) -> CLKComplicationTimelineEntry {

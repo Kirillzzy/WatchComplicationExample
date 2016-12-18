@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		82272C6C1E06F1CC00C1DBD3 /* WatchSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82272C6B1E06F1CC00C1DBD3 /* WatchSessionManager.swift */; };
+		82272C6D1E06F1CC00C1DBD3 /* WatchSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82272C6B1E06F1CC00C1DBD3 /* WatchSessionManager.swift */; };
 		824E5DE41E06C10E00113449 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824E5DE31E06C10E00113449 /* AppDelegate.swift */; };
 		824E5DE61E06C10E00113449 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824E5DE51E06C10E00113449 /* ViewController.swift */; };
 		824E5DE91E06C10E00113449 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 824E5DE71E06C10E00113449 /* Main.storyboard */; };
@@ -66,6 +68,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		82272C6B1E06F1CC00C1DBD3 /* WatchSessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchSessionManager.swift; sourceTree = "<group>"; };
 		824E5DE01E06C10E00113449 /* WatchOS3ComplicationExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchOS3ComplicationExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		824E5DE31E06C10E00113449 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		824E5DE51E06C10E00113449 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +110,7 @@
 		824E5DD71E06C10E00113449 = {
 			isa = PBXGroup;
 			children = (
+				82272C6B1E06F1CC00C1DBD3 /* WatchSessionManager.swift */,
 				824E5DE21E06C10E00113449 /* WatchOS3ComplicationExample */,
 				824E5DF81E06C16B00113449 /* ComplicationApp */,
 				824E5E071E06C16B00113449 /* ComplicationApp Extension */,
@@ -299,6 +303,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82272C6C1E06F1CC00C1DBD3 /* WatchSessionManager.swift in Sources */,
 				824E5DE61E06C10E00113449 /* ViewController.swift in Sources */,
 				824E5DE41E06C10E00113449 /* AppDelegate.swift in Sources */,
 			);
@@ -310,6 +315,7 @@
 			files = (
 				824E5E0B1E06C16B00113449 /* ExtensionDelegate.swift in Sources */,
 				824E5E091E06C16B00113449 /* InterfaceController.swift in Sources */,
+				82272C6D1E06F1CC00C1DBD3 /* WatchSessionManager.swift in Sources */,
 				824E5E0D1E06C16B00113449 /* ComplicationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -565,6 +571,7 @@
 				824E5DF41E06C10E00113449 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		824E5E141E06C16B00113449 /* Build configuration list for PBXNativeTarget "ComplicationApp Extension" */ = {
 			isa = XCConfigurationList;
@@ -573,6 +580,7 @@
 				824E5E161E06C16B00113449 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		824E5E181E06C16B00113449 /* Build configuration list for PBXNativeTarget "ComplicationApp" */ = {
 			isa = XCConfigurationList;
@@ -581,6 +589,7 @@
 				824E5E1A1E06C16B00113449 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
