@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>ComplicationApp (Complication).xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>ComplicationApp.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>WatchOS3ComplicationExample.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -13,6 +23,11 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>824E5DDF1E06C10E00113449</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>824E5DF61E06C16A00113449</key>
 		<dict>
 			<key>primary</key>
 			<true/>
